@@ -40,12 +40,21 @@ public class GameController {
     }
 
     public GameStatus getStatus() {
-        return this.status;
+        //return this.status;
+        return null;
     }
 
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
+    }
+
+    public void setCharacterPosition(Point coordinates) {
+
+    }
+
+    public int getTotalPositions() {
+        return 0;
     }
 
 }
