@@ -1,5 +1,6 @@
-package com.levelup.forestsandmonsters.features;
+package com.levelup.forestsandmonsters.cli;
 
+import com.levelup.forestsandmonsters.Position;
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 public class Character {
