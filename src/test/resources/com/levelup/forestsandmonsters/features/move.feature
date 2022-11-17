@@ -23,3 +23,16 @@ Scenario Outline: Move in a direction
         | 5 | 5 | WEST | 5 | 5 |
         | 5 | -5 | SOUTH | 5 | -5 |
 
+Scenario Outline: After every move the status count is increased by one       
+    Given character has a status count of <currentStatus>
+    When character makes a move
+    Then the updated status count is <endStatus>
+    Examples:
+        | currentStatus | endStatus |
+        | 5 | 6 |
+        | 87 | 88 |
+        | 23 | 24 |
+        | 321 | 322 |
+        | 211 | 212 |
+        | 27 | 28 |
+        | 15 | 16 |
