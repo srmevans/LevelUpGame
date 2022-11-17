@@ -14,3 +14,11 @@ Scenario Outline: Move in a direction
         | startingPositionX | startingPositionY | direction | endingPositionX | endingPositonY | 
         | 0 | 0 | NORTH | 0 | 1 |
         | 0 | 0 | SOUTH | 0 | 0 |
+        | 1 | 0	| EAST | 0 | 0 |
+        | 1 | -3 | WEST | 2 | -3 |
+        | 3	| 2 | NORTH | 3 | 3 |
+        | 4 | 1 | SOUTH | 4 | 0 |
+        | -5 | -5 | EAST | -5 | -5 |
+        | -5 | 5 | NORTH | -5 | 5 |
+        | 5 | 5 | WEST | 5 | 5 |
+        | 5 | -5 | SOUTH | 5 | -5 |
