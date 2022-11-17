@@ -43,5 +43,5 @@ public class MoveSteps {
             assertNotNull("Expected position not null", this.currentPosition);
             assertEquals(endX, this.currentPosition.x);
         }
-        }
+        
 }
