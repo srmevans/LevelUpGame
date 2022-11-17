@@ -36,3 +36,11 @@ Scenario Outline: After every move the status count is increased by one
         | 211 | 212 |
         | 27 | 28 |
         | 15 | 16 |
+
+Scenario Outline: When character hits a map boundary, the position remains but move count (status) increases by one
+Given character is at a boundary position <boundaryPositionX>,<boundaryPositionY> 
+And current move count is <currentMoveCount>
+And they move one step towards the boundary <newBoundaryPositionX>,<newBoundaryPositionY>
+Then the step is allowed
+And the position values do not change <newBoundaryPositionX>,<newBoundaryPositionY>
+And the status count increases by one <moveCount>
