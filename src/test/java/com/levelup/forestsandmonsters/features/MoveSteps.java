@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -20,11 +21,11 @@ public class MoveSteps {
         public void givenTheCharacterStartsAtX(int startX) {
             this.startX = startX;
         }
-    @Given("starts at YCoordinates {int}")
+    @And("starts at YCoordinates {int}")
         public void givenTheCharacterStartsAtY(int startY) {
             this.startY = startY;
         }   
-    @Given("the player chooses to move in {word}")
+    @And("the player chooses to move in {word}")
         public void givenPlayerChoosesDirection(String direction) {
             this.direction = GameController.DIRECTION.valueOf(direction);
         }  
@@ -43,7 +44,7 @@ public class MoveSteps {
             assertNotNull("Expected position not null", this.currentPosition);
             assertEquals(endX, this.currentPosition.x);
         }
-        @Then("YCoordinates {int}")
+        @And("YCoordinates {int}")
         public void checkYCoordinates(int endY) {
             assertNotNull("Expected Position not null",this.currentPosition);
             assertEquals(endY, this.currentPosition.y);
