@@ -43,5 +43,12 @@ public class MoveSteps {
             assertNotNull("Expected position not null", this.currentPosition);
             assertEquals(endX, this.currentPosition.x);
         }
+        @Then("YCoordinates {int}")
+        public void checkYCoordinates(int endY) {
+            assertNotNull("Expected Position not null",this.currentPosition);
+            assertEquals(endY, this.currentPosition.y);
+
+
+        }
         
 }
