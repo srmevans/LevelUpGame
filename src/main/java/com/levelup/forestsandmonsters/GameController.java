@@ -51,8 +51,7 @@ public class GameController {
     }
 
     public void setCharacterPosition(Point coordinates) {
-        
-
+        // TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
     }
 
     public int getTotalPositions() {
