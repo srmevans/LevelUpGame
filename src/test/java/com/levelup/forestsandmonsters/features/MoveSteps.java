@@ -5,7 +5,6 @@ import com.levelup.forestsandmonsters.GameController;
 import java.awt.Point;
 import static org.junit.Assert.assertEquals;
 
-import com.levelup.forestsandmonsters.GameController;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -27,4 +26,14 @@ public class MoveSteps {
         public void givenPlayerChoosesDirection(String direction) {
             this.direction = GameController.DIRECTION.valueOf(direction);
         }  
-    }
+    
+    @when("the character moves")
+        public void theCharacterMoves() {
+            gc = new GameController();
+            gc.setCharacterPosition(new Point(this.startX,this.startY));
+            gc.move(this.direction);
+            GameController.GameStatus status = gc.getStatus(); 
+            this.currentPosition = status.currentPosition;
+        
+        }
+}
