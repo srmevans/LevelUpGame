@@ -4,6 +4,8 @@ import com.levelup.forestsandmonsters.GameController;
 
 import java.awt.Point;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -35,5 +37,11 @@ public class MoveSteps {
             GameController.GameStatus status = gc.getStatus(); 
             this.currentPosition = status.currentPosition;
         
+        }
+        @Then("the character is now at positon with XCoordinates {int}")
+        public void checkXCoordinates(int endX) {
+            assertNotNull("Expected position not null", this.currentPosition);
+            assertEquals(endX, this.currentPosition.x);
+        }
         }
 }
