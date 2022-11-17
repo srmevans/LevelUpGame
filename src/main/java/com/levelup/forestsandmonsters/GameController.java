@@ -21,7 +21,7 @@ public class GameController {
 
     // TODO: Ensure this AND CLI commands match domain model
     public static enum DIRECTION {
-        U,D,L,R
+        NORTH, SOUTH, EAST, WEST;
     }
 
     // Pre-implemented to demonstrate ATDD
@@ -41,8 +41,7 @@ public class GameController {
     }
 
     public GameStatus getStatus() {
-        //return this.status;
-        return null;
+        return this.status;
     }
 
     public void move(DIRECTION directionToMove) {
