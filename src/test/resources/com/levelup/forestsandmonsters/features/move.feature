@@ -44,3 +44,6 @@ And they move one step towards the boundary <newBoundaryPositionX>,<newBoundaryP
 Then the step is allowed
 And the position values do not change <newBoundaryPositionX>,<newBoundaryPositionY>
 And the status count increases by one <moveCount>
+Examples:
+    | boundaryPositionX | boundaryPositionY | currentMoveCount | newBoundaryPositionX | newBoundaryPositionY | moveCount
+    | 10 | 10 | 10 | 10 | 10 | 11 |
