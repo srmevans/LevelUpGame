@@ -8,6 +8,6 @@ public class PositionTest {
 public void initializationPositionTest()
     {
         Position testObj = new Position(1, 0);
-        assertEquals(0, testObj.coordinates.x);
+        assertEquals(1, testObj.coordinates.x);
     }
 }
