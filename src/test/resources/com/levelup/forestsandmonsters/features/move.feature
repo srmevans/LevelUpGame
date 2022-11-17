@@ -6,7 +6,7 @@ Scenario Outline: Move in a direction
     Given the character starts at position with XCoordinates <startingPositionX>
     And starts at YCoordinates <startingPositionY>
     And the player chooses to move in <direction>
-    When character moves
+    When the character moves
     Then the character is now at positon with XCoordinates <endingPositionX>
     And YCoordinates <endingPositionY>
     Examples: 

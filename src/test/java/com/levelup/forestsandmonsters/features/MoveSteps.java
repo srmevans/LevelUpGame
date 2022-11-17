@@ -27,7 +27,7 @@ public class MoveSteps {
             this.direction = GameController.DIRECTION.valueOf(direction);
         }  
     
-    @When("character moves")
+    @When("the character moves")
         public void theCharacterMoves() {
             gc = new GameController();
             gc.setCharacterPosition(new Point(this.startX,this.startY));
