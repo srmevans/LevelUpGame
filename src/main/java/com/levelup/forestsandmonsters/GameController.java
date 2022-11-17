@@ -40,6 +40,10 @@ public class GameController {
         // TODO: Should also update the game results?
     }
 
+    public void promptStart(){
+        //TODO: Print welcome, ascii art, ask user if they want to start game
+    }
+
     public GameStatus getStatus() {
         return this.status;
     }

@@ -1,4 +1,6 @@
 package com.levelup.forestsandmonsters.features;
+import com.levelup.forestsandmonsters.GameController;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -12,8 +14,8 @@ public class StartGameSteps {
     
     @Given("the player starts a new game")
     public void the_player_starts_a_new_game() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        GameController newGame = new GameController();
+        newGame.startGame();
     }
     
     @When("the player enters the game")
