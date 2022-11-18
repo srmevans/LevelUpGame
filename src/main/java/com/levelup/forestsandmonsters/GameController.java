@@ -33,9 +33,15 @@ public class GameController {
     }
 
     public void startGame() {
-        // TODO: Implement startGame - Should probably create tiles and put the character
-        // on them?
-        // TODO: Should also update the game results?
+        map = new GameMap();
+        if(character == null)
+        {
+            this.character = new Character();
+        }
+        character.enterMap(map);
+        this.status.characterName = this.character.name;
+        this.status.currentPosition = this.character.getPosition().coordinates;
+        this.status.moveCount = this.character.getMoveCount();
     }
 
     public void promptStart(){
@@ -43,7 +49,11 @@ public class GameController {
     }
 
     public GameStatus getStatus() {
-        return this.status;
+        GameStatus snapshotStatus = new GameStatus();
+        snapshotStatus.characterName = this.status.characterName;
+        snapshotStatus.currentPosition = this.status.currentPosition;
+        snapshotStatus.moveCount = this.status.moveCount;
+        return snapshotStatus;
     }
 
     public void move(DIRECTION directionToMove) {
