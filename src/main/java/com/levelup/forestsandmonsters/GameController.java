@@ -3,12 +3,15 @@ package com.levelup.forestsandmonsters;
 import java.awt.Point;
 
 public class GameController {
-    static final String DEFAULT_CHARACTER_NAME = "Character";
+    Character character;
+    GameMap map;
 
     public class GameStatus {
+        public String characterName;
+        public Point currentPosition;
+        public int moveCount;
         // TODO: Add other status data
-        public String characterName = DEFAULT_CHARACTER_NAME;
-        public Point currentPosition=null;
+       
     }
 
     GameStatus status;
@@ -25,11 +28,8 @@ public class GameController {
     // Pre-implemented to demonstrate ATDD
     // TODO: Update this if it does not match your design
     public void createCharacter(String name) {
-        if (name != null && !name.equals("")) {
-            status.characterName = name;
-        } else {
-            status.characterName = DEFAULT_CHARACTER_NAME;
-        }
+        this.character = new Character(name);
+        this.status.characterName = character.getName();
     }
 
     public void startGame() {
@@ -51,8 +51,14 @@ public class GameController {
         // TODO: Should probably also update the game results
     }
 
-    public void setCharacterPosition(Point coordinates) {
-        // TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
+    public void setCharacterPositionAndMoveCount(Point coordinates, int moveCount) {
+        if(character == null)
+            this.character = new Character();
+        this.character.currentPosition = new Position(coordinates.x, coordinates.y);
+        this.character.moveCount = moveCount;
+        this.status.characterName = this.character.name;
+        this.status.currentPosition = this.character.currentPosition.coordinates;
+        this.status.moveCount = this.character.moveCount;
     }
 
     public int getTotalPositions() {
