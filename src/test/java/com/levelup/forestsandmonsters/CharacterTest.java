@@ -4,8 +4,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
-import com.levelup.forestsandmonsters.cli.Character;
-import com.levelup.forestsandmonsters.cli.GameMap;
 
 public class CharacterTest {
     @Test
