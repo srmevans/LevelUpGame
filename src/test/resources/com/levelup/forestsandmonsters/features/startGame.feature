@@ -2,11 +2,11 @@ Feature: Start the game
 
 I want to generate a map, and position the character on the map
 
-Scenario: Start the game
-    Given the player starts a new game
-    When the player enters the game
-    Then the map is generated
+Scenario Outline: Start the game
+    When the player starts a new game
+    Then the map is generated with number of positions <numPositions>
     And the character is position at XCoordinates <startingPositionX>
     And YCoordinates <startingPositionY>
-    | startingPositionX | startingPositionY |
-    | 0 | 0 |
+    Examples:
+    | numPositions | startingPositionX | startingPositionY |
+    | 10           | 0                 | 0                 |
