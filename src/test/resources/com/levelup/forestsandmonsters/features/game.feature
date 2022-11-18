@@ -6,10 +6,10 @@ This split is VERY simple, to get us started. Just barebones game functionality.
 
 Scenario Outline: Set character name
     Given the character's name is <characterNameInput>
-    When the character sets their name
+    When the character sets their name <characterNameInput>
     Then the Game sets the character's name to <characterNameOutput>
     Examples:
         | characterNameInput | characterNameOutput |
-        | Stephanie | Stephanie |
-        | "" | Character |
+        | "Bob" | "Bob" |
+        | "" | "Character" |
 

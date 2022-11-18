@@ -17,8 +17,8 @@ public class GameSteps {
         this.characterName = characterName;
     }
 
-    @When("the character sets their name")
-    public void whenTheCharacterSetsTheirName() {
+    @When("the character sets their name {string}")
+    public void whenTheCharacterSetsTheirName(String characterName) {
         gc = new GameController();
         gc.createCharacter(characterName);
     }
