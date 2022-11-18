@@ -6,7 +6,7 @@ import java.awt.Point;
 
 public class GameMap {
 Position [][] positions;
-public Position startPosition = new Position(0, 0);
+public Position startingPosition = new Position(0, 0);
 public int numPostions = 100;
 
     public Position [][] getPositions(){
