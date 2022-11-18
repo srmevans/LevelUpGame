@@ -7,6 +7,6 @@ Scenario Outline: Start the game
     Then the map is generated with number of positions <numPositions>
     And the character is position at XCoordinates <startingPositionX>
     And YCoordinates <startingPositionY>
-    Examples:
+    Examples:    
     | numPositions | startingPositionX | startingPositionY |
-    | 10           | 0                 | 0                 |
+    | 0 | 0 | 0 |
