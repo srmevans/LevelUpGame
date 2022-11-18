@@ -7,9 +7,9 @@ public class Character {
 
     public static final String DEFAULT_NAME = "Stephanie";
     String name;
-    GameMap map = null;
-    Position currentPosition = null;
-    int moveCount = 0;
+    public GameMap map = null;
+    public Position currentPosition = null;
+    public int moveCount = 0;
 
     
     public Character(){
