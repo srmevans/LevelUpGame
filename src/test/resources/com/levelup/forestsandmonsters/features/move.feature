@@ -15,7 +15,7 @@ Scenario Outline: Move in a direction
         | 1 | 0 | EAST | 2 | 0 |
         | 1 | 3 | WEST | 0 | 3 |
         | 3 | 2	| NORTH | 3 | 3 |
-        | 4 | 1 | SOUTH | 4 | 2 |
+        | 4 | 1 | SOUTH | 4 | 0 |
         | 0	| 0 | WEST | 0 | 0 |
         | 0 | 10 | NORTH | 0 | 10 |
         | 10 | 0 | EAST | 10 | 0 |
