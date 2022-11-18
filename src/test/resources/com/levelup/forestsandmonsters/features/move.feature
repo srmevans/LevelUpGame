@@ -11,7 +11,7 @@ Scenario Outline: Move in a direction
     Then the character is now at positon with XCoordinates <endingPositionX>
     And YCoordinates <endingPositionY>
     Examples: 
-        | startingPositionX | startingPositionY | direction | endingPositionX | endingPositonY | 
+        | startX | startY | direction | endX | endY | 
         | 1 | 0 | EAST | 2 | 0 |
         | 1 | 3 | WEST | 0 | 3 |
         | 3 | 2	| NORTH | 3 | 3 |
